@@ -24,6 +24,7 @@ for (var i=0; i<dogs.length; i++){
 | search function
 -------------------------------------*/
 
+var n = 1;
 var resultArray;
 /* global -------------------------------*/
 
@@ -31,7 +32,7 @@ function findDog(userSearch) {
   $('#result').empty();
   $('#tag h2').html(userSearch);
 
-  var queryURL = $.get("http://api.giphy.com/v1/gifs/search?q=" + userSearch + "&api_key=QDXHFmXllVMTU7lWhz9Ll9ulsJaO0oQD&limit=10");
+  var queryURL = $.get("https://api.giphy.com/v1/gifs/search?q=" + userSearch + "&api_key=QDXHFmXllVMTU7lWhz9Ll9ulsJaO0oQD&limit=10");
 
   // $.ajax({
   //   url: queryURL,
@@ -52,6 +53,8 @@ function findDog(userSearch) {
 
       $('#result').append('<div class="box">' + imgHTML + '</div>');
       $('.box:eq('+ i + ')').append('<p>Rating: ' + imgRate + '</p>');
+
+	  n++;
     }
   });
 
