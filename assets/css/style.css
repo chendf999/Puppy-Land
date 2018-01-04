@@ -1,0 +1,86 @@
+
+header {
+  width: 70%;
+  margin: 20px auto;
+}
+
+.brand {
+  float: left;
+  width: 50%;
+}
+
+.brand h1 {
+  font-size: 50px;
+  display: inline;
+  vertical-align: top;
+}
+
+.brand img {
+  height: 50px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.search {
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+
+.search input {
+  height: 30px;
+  width: 70%;
+  margin-top: 8px;
+}
+
+.search button {
+  height: 36px;
+  width: 70px;
+}
+
+#tag {
+  clear: both;
+  width: 70%;
+  margin: 0 auto;
+}
+
+#tag h2 {
+  font-size: 35px;
+  float: left;
+  width: 30%;
+  margin-top: 20px;
+}
+
+.hashtag {
+  float: right;
+  margin: 30px 0;
+  text-align: right;
+  width: 70%;
+}
+
+.hashtag a{
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  padding: 6px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 2px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+#result {
+  clear: both;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  grid-gap: 2%;
+  text-align: left;
+}
+
+.box img { width: 100%;}
+
+.box p { margin: 3px 0 12px 0;}
