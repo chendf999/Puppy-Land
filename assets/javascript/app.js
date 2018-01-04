@@ -24,7 +24,6 @@ for (var i=0; i<dogs.length; i++){
 | search function
 -------------------------------------*/
 
-var n = 1;
 var resultArray;
 /* global -------------------------------*/
 
@@ -53,8 +52,6 @@ function findDog(userSearch) {
 
       $('#result').append('<div class="box">' + imgHTML + '</div>');
       $('.box:eq('+ i + ')').append('<p>Rating: ' + imgRate + '</p>');
-
-	  n++;
     }
   });
 
@@ -66,8 +63,13 @@ function findDog(userSearch) {
 
 $('.search button').on('click', function(){
   var userSearch = $('.search input').val();
-  addDog(userSearch);
-  findDog(userSearch);
+  var isletter = /^[a-zA-Z]+$/.test(userSearch);
+  if(isletter){
+    addDog(userSearch);
+    findDog(userSearch);
+  } else {
+    $('.search input').val('This is not a puppy!');
+  }
 });
 
 $('.hashtag a').on('click', function(){
